@@ -4,7 +4,7 @@ This repository allows running training katas written in Javascript or Typescrip
 
 ## Install
 
-- Clone this repo
+- Clone this repo: `git clone https://github.com/albert-gonzalez/kata-runner-nodejs.git`
 - run `npm install`
 
 ## Tools
