@@ -1,21 +1,79 @@
-# Javascript/Typescript Kata Runner
+# Gilded Rose Refactoring Kata in Typescript
 
-This repository allows running training katas written in Javascript or Typescript using NodeJS and Jest Testing Framework.
+Typescript Version of Gilded Rose Refactoring Kata, forked from guyroyse's repository:
+
+https://github.com/guyroyse/gilded-rose-javascript
 
 ## Install
 
-- Clone this repo
-- run `npm install`
+If you want to get cracking on the Typescript source then do this:
+
+Clone the repo with `git clone -b gilded-rose-typescript https://github.com/albert-gonzalez/kata-runner-nodejs.git`
+
+Run `npm install`
 
 ## Usage
 
-You will find two folders in the root:
+Run the tests with `npm test`
 
-- src: The source files will be placed here
-- test: The tests files will be placed here
+You can add your tests into the test folder
 
-You have available the following scripts in package.json:
+## Instructions
 
-- Run `npm test` to run the tests placed inside the test folder
-- Run `npm run code src/your-file` to run your file with ts-node-dev
-- Run `npm run watch src/your.file` to run your file with ts-node-dev in watch mode
+Hi and welcome to team Gilded Rose.
+
+As you know, we are a small inn with a prime location in a prominent city ran
+by a friendly innkeeper named Allison. We also buy and sell only the finest
+goods. Unfortunately, our goods are constantly degrading in quality as they
+approach their sell by date.
+
+We have a system in place that updates our inventory for us. It was developed
+by a no-nonsense type named Leeroy, who has moved on to new adventures. Your
+task is to add the new feature to our system so that we can begin selling a
+new category of items.
+
+First an introduction to our system:
+
+- All items have a _sellIn_ value which denotes the number of days we have to
+  sell the item
+
+- All items have a _quality_ value which denotes how valuable the item is
+
+- At the end of each day our system lowers both values for every item
+
+Pretty simple, right? Well this is where it gets interesting:
+
+- Once the _sellIn_ days is less then zero, _quality_ degrades twice as fast
+
+- The _quality_ of an item is never negative
+
+- "Aged Brie" actually increases in _quality_ the older it gets
+
+- The _quality_ of an item is never more than 50
+
+- "Sulfuras", being a legendary item, never has to be sold nor does it
+  decrease in _quality_
+
+- "Backstage passes", like aged brie, increases in _quality_ as it's _sellIn_
+  value decreases; _quality_ increases by 2 when there are 10 days or less
+  and by 3 when there are 5 days or less but _quality_ drops to 0 after the
+  concert
+
+We have recently signed a supplier of conjured items. This requires an update
+to our system:
+
+- "Conjured" items degrade in _quality_ twice as fast as normal items
+
+Feel free to make any changes to the _updateQuality_ method and add any new
+code as long as everything still works correctly. However, do not alter the
+_Item_ class or _items_ property (in programExample) as those belong to the goblin in the corner
+who will insta-rage and one-shot you as he doesn't believe in shared code
+ownership.
+
+Just for clarification, an item can never have its _quality_ increase above 50,
+however "Sulfuras" is a legendary item and as such its _quality_ is 80 and it
+never alters.
+
+Sources:
+<http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/>
+<https://github.com/professor/GildedRose>
