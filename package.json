@@ -10,7 +10,9 @@
     "test": "jest",
     "check-types": "tsc --noEmit",
     "linter": "eslint src test",
-    "linter:fix": "eslint --fix src test"
+    "linter:fix": "eslint --fix src test",
+    "code": "ts-node-dev",
+    "watch": "ts-node-dev --respawn"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
     "@typescript-eslint/parser": "^4.28.0",
     "eslint": "^7.29.0",
     "jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.4"
   }
 }
